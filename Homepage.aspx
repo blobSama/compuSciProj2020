@@ -9,22 +9,48 @@
 </head>
 <body>
      <div id="header">
-        <a class="bttn1" href="Homepage.aspx">Home Page</a>
-        <a class="bttn1" href="watchRate.aspx">SmartWatch Rate</a>
-        <a class="bttn1" href="watchInfo.aspx">Watch Data</a>
-        <a class="bttn1" href="Register.aspx">Register</a>
-        <a class="bttn1" href="gallery.aspx">Gallery</a>
-        <a class="bttn1" href="enterInfo.aspx">Enter watch</a>
-        <input type="text" id="search" name="search" placeholder="Search..."/><br/>
+        <ul>
+            <li><a class="bttn1" href="Homepage.aspx">Home Page</a></li>
+            <li><a class="bttn1" href="signIn.aspx">Sign In</a></li>
+            <li><a class="bttn1" href="watchData.aspx">Watch Data</a></li>
+            <li><a class="bttn1" href="Register.aspx">Register</a></li>
+            <li><a class="bttn1" href="usersData.aspx">Users Data</a></li>
+            <li><a class="bttn1" href="enterInfo.aspx">Enter watch</a></li>
+            <li><a class="bttn1" href="about.aspx">About Us</a></li>
+            <li style="float:right"><asp:Label ID="hello" CssClass="greet" runat="server" Text=""></asp:Label></li>
+        </ul>
+        <br/>
     </div>
     <br/>
     <div id="title">
         <p>SmartWatch Comparison</p>
+        <p>Welcome to our site! Roam around!</p>
     </div>
     <footer id="foot1">
-        <p>contact us, etc.</p>
+        <p>contact us - ariel.berant@gmail.com</p>
     </footer>
-    <img id="img1" src="https://i.pcmag.com/imagery/reviews/06wOWJm5EwAs7OFrSQ1G2fU-6.fit_lpad.size_624x364.v_1569479241.jpg"
-        alt="Smart watch" title="smart"/>
+    <div>
+        <img class ="mySlides" src="Images/1.jpg" />
+        <img class ="mySlides" src="Images/2.jpg" />
+        <img class ="mySlides" src="Images/3.jpg" />
+        <img class ="mySlides" src="Images/4.jpg" />
+    </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3400);
+        }
+    </script>
 </body>
 </html>

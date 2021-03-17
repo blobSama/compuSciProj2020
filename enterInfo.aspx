@@ -10,20 +10,24 @@
 </head>
 <body>
     <div id="header">
-		<a class="bttn1" href="Homepage.aspx">Home Page</a>
-		<a class="bttn1" href="watchRate.aspx">SmartWatch Rate</a>
-		<a class="bttn1" href="watchData.aspx">Watch Data</a>
-		<a class="bttn1" href="Register.aspx">Register</a>
-		<a class="bttn1" href="gallery.aspx">Gallery</a>
-		<a class="bttn1" href="enterInfo.aspx">Enter watch</a>
-		<input type="text" id="search" name="search" placeholder="Search..." /><br/>
-	</div>
+        <ul>
+            <li><a class="bttn1" href="Homepage.aspx">Home Page</a></li>
+            <li><a class="bttn1" href="signIn.aspx">Sign In</a></li>
+            <li><a class="bttn1" href="watchData.aspx">Watch Data</a></li>
+            <li><a class="bttn1" href="Register.aspx">Register</a></li>
+            <li><a class="bttn1" href="usersData.aspx">Users Data</a></li>
+            <li><a class="bttn1" href="enterInfo.aspx">Enter watch</a></li>
+            <li><a class="bttn1" href="about.aspx">About Us</a></li>
+            <li style="float:right"><asp:Label ID="hello" CssClass="greet" runat="server" Text=""></asp:Label></li>
+        </ul>
+        <br/>
+    </div>
 	<br />
 	<div id="title">
 		<p>SmartWatch Comparison</p>
 	</div>
 	<footer id="foot1">
-		<p>contact us, etc.</p>
+		<p>contact us - ariel.berant@gmail.com</p>
 	</footer>
 	<div id="uploadOut">
 		<div id="uploadIn">
@@ -46,7 +50,7 @@
 				<input class="in" type="text" id="mail" name="mail" placeholder="name@gmail.com" onchange="ValidateEmail()"/><br />
 				<label for="mail" class="lbl1" id="mailWrng"></label><br /><br />
 				<label for="phone">Mobile Number</label><br />
-				<input class="in" type="text" placeholder="050-000-0000" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" title="" id="phone" name="phone" onchange="ValidatePhone()"/><br />
+				<input class="in" type="text" placeholder="0500000000" title="" id="phone" name="phone" onchange="ValidatePhone()"/><br />
 				<label for="phone" class="lbl1" id="phoneWrng"></label><br /><br />
 				<label for="enquiry">Category<em class = "redF">*</em></label><br />
 				<select id="enquiry" name="enquiry" onchange="checkType()" required ="required">

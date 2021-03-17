@@ -9,6 +9,10 @@ namespace compuSciProj2020
     {
         private string id;
         private string firstname;
+        private string lastname;
+        private string passWord;
+        private string addrs;
+        private int age;
 
         public User()
         {
@@ -36,6 +40,54 @@ namespace compuSciProj2020
             set
             {
                 this.firstname = value;
+            }
+        }
+
+        public string pssWrd
+        {
+            get
+            {
+                return this.passWord;
+            }
+            set
+            {
+                this.passWord = value;
+            }
+        }
+
+        public string Lastname
+        {
+            get
+            {
+                return this.lastname;
+            }
+            set
+            {
+                this.lastname = value;
+            }
+        }
+
+        public string Addrs
+        {
+            get
+            {
+                return this.addrs;
+            }
+            set
+            {
+                this.addrs = value;
+            }
+        }
+
+        public int Age
+        {
+            get
+            {
+                return this.age;
+            }
+            set
+            {
+                this.age = value;
             }
         }
     }

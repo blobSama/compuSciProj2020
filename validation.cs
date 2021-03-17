@@ -63,7 +63,7 @@ namespace compuSciProj2020
             return ok;
         }
 
-        public static bool CheckCatg(String cat)
+        public static bool CheckCatg(String cat)// checks if category was filled in
         {
             if (!cat.Equals("Choose..."))
             {
@@ -75,7 +75,7 @@ namespace compuSciProj2020
             }
         }
 
-        public static bool CheckAmnt(int amnt)
+        public static bool CheckAmnt(int amnt)// checks if amount between 0 to 1000
         {
             if (amnt >= 0 && amnt <= 1000)
             {
@@ -87,7 +87,7 @@ namespace compuSciProj2020
             }
         }
 
-        public static bool CheckCost(int cost)
+        public static bool CheckCost(int cost)//checks if cost between 1 to 1500
         {
             if (cost >= 1 && cost <= 1500)
             {
@@ -99,7 +99,7 @@ namespace compuSciProj2020
             }
         }
 
-        public static bool CheckPhoneNum(string number)
+        public static bool CheckPhoneNum(string number)//checks if phone number is not only numbers
         {//checks if phone ok
             string str = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*()[]{}:?<>";
             if (number.Length != 10)
@@ -138,6 +138,71 @@ namespace compuSciProj2020
             {
                 return false;
             }
+        }
+
+        public static bool CheckPass(string pass)//checks if password is between 8 to 16 characters
+        {
+            if (pass.Length >= 8 && pass.Length <= 16)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool CheckLName(string lname)//checks if lname longer than 2 and is letters
+        {
+            string str = "0.1234546+789/*-~!@#$%^&*()_-={}[]'|:;?\'<>";
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (lname.IndexOf(str[i]) != -1)
+                    return false;
+            }
+            return lname.Length >= 2;
+        }
+
+        public static bool CheckAge(int age)//checks if age is greater than 16
+        {
+            if (age > 16)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool CheckUser(User u)
+        {
+            bool ok = true;
+            if (!CheckEmail(u.Addrs))
+            {
+                ok = false;
+            }
+            if (!CheckAge(u.Age))
+            {
+                ok = false;
+            }
+            if (!CheckFName(u.Firstname))
+            {
+                ok = false;
+            }
+            if (!CheckLName(u.Firstname))
+            {
+                ok = false;
+            }
+            if (!CheckPass(u.pssWrd))
+            {
+                ok = false;
+            }
+            if (!CheckId(u.ID))
+            {
+                ok = false;
+            }
+            return ok;
         }
     }
 }

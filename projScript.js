@@ -7,45 +7,40 @@ function validateForm() {
                     if (document.getElementById("amntWrng").innerHTML == "") {
                         if (document.getElementById("ftrsWrng").innerHTML == "") {
                             if (document.getElementById("enqWrng").innerText == "") {
-                                if (document.getElementById("enqWrng").innerHTML == "") {
-                                    if (document.getElementById("linkWrng").innerText == "") {
-                                        document.getElementById("submit").disabled = false;
-                                        document.getElementById("submitWrng").innerHTML = "Ready to submit!";
-                                    }
-                                    else {
-                                        document.getElementById("submitWrng").innerHTML = "Please check your input.";
-                                    }
+                                if (document.getElementById("linkWrng").innerText == "") {
+                                   document.getElementById("submit").disabled = false;
+                                   document.getElementById("submitWrng").innerHTML = "Ready to submit!";
                                 }
                                 else {
-                                    document.getElementById("submitWrng").innerHTML = "Please check your input.";
+                                    document.getElementById("submitWrng").innerHTML = "Please check your picture.";
                                 }
                             }
                             else {
-                                document.getElementById("submitWrng").innerHTML = "Please check your input.";
+                                document.getElementById("submitWrng").innerHTML = "Please check the watch type.";
                             }
                         }
                         else {
-                            document.getElementById("submitWrng").innerHTML = "Please check your input.";
+                            document.getElementById("submitWrng").innerHTML = "Please check the features.";
                         }
                     }
                     else {
-                        document.getElementById("submitWrng").innerHTML = "Please check your input.";
+                        document.getElementById("submitWrng").innerHTML = "Please check amnt. for sale(between 0 to 1000).";
                     }
                 }
                 else {
-                    document.getElementById("submitWrng").innerHTML = "Please check your input.";
+                    document.getElementById("submitWrng").innerHTML = "Please check the cost(between 1 to 1500).";
                 }
             }
             else {
-                document.getElementById("submitWrng").innerHTML = "Please check your input.";
+                document.getElementById("submitWrng").innerHTML = "Please check phone number.";
             }
         }
         else {
-            document.getElementById("submitWrng").innerHTML = "Please check your input.";
+            document.getElementById("submitWrng").innerHTML = "Please check your mail address.";
         }
     }
     else {
-        document.getElementById("submitWrng").innerHTML = "Please check your input."
+        document.getElementById("submitWrng").innerHTML = "Please create an account."
     }
 }
 /*
@@ -109,7 +104,7 @@ function ValidateEmail() {
 }
 
 function ValidatePhone() {
-    var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    var phoneno = /^[0-9]{10}$/;
     var inputtxt = document.getElementById("phone");
     if((inputtxt.value.match(phoneno))) {
         document.getElementById("phoneWrng").innerHTML = "";
@@ -183,7 +178,8 @@ function checkUMail() {
 }
 
 function checkAge() {
-    if (document.getElementById("age").value < 0) {
+    var uAge = document.getElementById("age").value;
+    if (uAge < 16) {
         document.getElementById("ageWrng").innerText = "Please enter valid age.";
         document.getElementById("age").value = "";
         return false;
@@ -195,9 +191,9 @@ function checkAge() {
 }
 
 function checkPass() {
-    var passFormat = /^[a-zA-Z0-9.!@#$%^&*]$/;
-    if (!document.getElementById("pass").value.match(passFormat)) {
-        document.getElementById("passWrng").innerText = "Please enter valid password.";
+    var pass = document.getElementById("pass").value;
+    if (!(pass.length >= 8 && pass.length <= 16)) {
+        document.getElementById("passWrng").innerText = "Please enter valid password(between 8 to 16 chars).";
         document.getElementById("pass").value = "";
         return false;
     }
@@ -208,9 +204,10 @@ function checkPass() {
 }
 
 function checkId() {
-    if (isNaN(document.getElementById("Uid"))) {
+    var userId = document.getElementById("UId").value;
+    if (isNaN(userId)) {
         document.getElementById("idWrng").innerText = "Please enter valid ID.";
-        document.getElementById("Uid").value = "";
+        document.getElementById("UId").value = "";
         return false;
     }
     else {
@@ -221,7 +218,15 @@ function checkId() {
 
 function checkAll() {
     var id = checkId(), Lname = checkLName(), name = checkName(), UMail = checkUMail(), age = checkAge(), pass = checkPass();
-    if (id&&Lname&&name&&UMail&&age&&pass) {
-        document.getElementById.disabled = false;
+    if (id&&pass&&Lname&&checkName&&checkUMail&&checkAge) {
+        document.getElementById("submit").disabled = false;
+        document.getElementById("checkWrng").innerText = "All good to go!";
     }
+    else {
+        document.getElementById("checkWrng").innerText = "Something's wrong here...";
+    }
+}
+
+function dis() {
+    document.getElementById("submit").disabled = true;
 }

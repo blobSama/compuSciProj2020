@@ -11,7 +11,14 @@ namespace compuSciProj2020
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["curUser"] != null)
+            {
+                hello.Text = "Hello, " + ((User)Session["curUser"]).Firstname;
+            }
+            else
+            {
+                hello.Text = "Hello, Guest";
+            }
         }
 
         protected void submit_Click(object sender, EventArgs e)
@@ -37,7 +44,8 @@ namespace compuSciProj2020
             {
                 watchService ws = new watchService();
                 ws.InsertWatch(w1);
-                Response.Redirect("enterInfo.aspx");
+                watchPic.Text = "";
+                Response.Redirect("watchData.aspx");
             }
             else
             {

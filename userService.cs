@@ -22,7 +22,7 @@ namespace compuSciProj2020
             try
             {
                 myConnection.Open();
-                string sSql = "INSERT INTO Users(ID, firstName) VALUES('" + u.ID + "', '" + u.Firstname + "')";
+                string sSql = "INSERT INTO [Users](ID, firstName, [lastName], [mailAdrs], [age], [password]) VALUES('" + u.ID + "', '" + u.Firstname + "', '"+u.Lastname+"', '"+u.Addrs+"', "+u.Age+", '"+u.pssWrd+"')";
                 OleDbCommand myCmd = new OleDbCommand(sSql, myConnection);
                 myCmd.ExecuteNonQuery();
             }
@@ -35,6 +35,75 @@ namespace compuSciProj2020
                 myConnection.Close();
             }
 
+        }
+
+        public DataSet GetUsersByIdAndPas(string id, string password)
+        {
+            DataSet dataset = new DataSet();
+            try
+            {
+                myConnection.Open();
+                string sSql = "select * from Users where ID='" + id + "'and [Password]= '" + password + "'";
+                OleDbCommand myCmd = new OleDbCommand(sSql, myConnection);
+                OleDbDataAdapter adapter = new OleDbDataAdapter();
+                adapter.SelectCommand = myCmd;
+                adapter.Fill(dataset, "Users");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                myConnection.Close();
+            }
+            return dataset;
+        }
+
+        public DataSet GetUser(string id)
+        {
+            DataSet dataset = new DataSet();
+            try
+            {
+                myConnection.Open();
+                string sSql = "select * from Users where ID='"+id+"'";
+                OleDbCommand myCmd = new OleDbCommand(sSql, myConnection);
+                OleDbDataAdapter adapter = new OleDbDataAdapter();
+                adapter.SelectCommand = myCmd;
+                adapter.Fill(dataset, "Users");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                myConnection.Close();
+            }
+            return dataset;
+        }
+
+        public DataSet GetUsers()
+        {
+            DataSet dataset = new DataSet();
+            try
+            {
+                myConnection.Open();
+                string sSql = "select * from Users";
+                OleDbCommand myCmd = new OleDbCommand(sSql, myConnection);
+                OleDbDataAdapter adapter = new OleDbDataAdapter();
+                adapter.SelectCommand = myCmd;
+                adapter.Fill(dataset, "Users");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                myConnection.Close();
+            }
+            return dataset;
         }
     }
 }

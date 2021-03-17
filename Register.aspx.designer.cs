@@ -15,6 +15,15 @@ namespace compuSciProj2020
     {
 
         /// <summary>
+        /// hello control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label hello;
+
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>
@@ -78,13 +87,13 @@ namespace compuSciProj2020
         protected global::System.Web.UI.WebControls.Label enterId;
 
         /// <summary>
-        /// Uid control.
+        /// UId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Uid;
+        protected global::System.Web.UI.WebControls.TextBox UId;
 
         /// <summary>
         /// idWrng control.
@@ -94,6 +103,24 @@ namespace compuSciProj2020
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label idWrng;
+
+        /// <summary>
+        /// csWrong control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label csWrong;
+
+        /// <summary>
+        /// checkWrng control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label checkWrng;
 
         /// <summary>
         /// submit control.

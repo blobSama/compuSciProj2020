@@ -69,17 +69,20 @@
   <ItemGroup>
     <Content Include="App_Data\compuProj2020.1.accdb" />
     <Content Include="enterInfo.aspx" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
     <Content Include="projScript.js" />
     <Content Include="registration.aspx" />
     <Content Include="styleSheet.css" />
+    <Content Include="usersData.aspx" />
     <Content Include="watchData.aspx" />
-    <Content Include="watchInfo.aspx" />
-    <Content Include="watchRate.aspx" />
     <Content Include="Web.config" />
     <Content Include="Homepage.aspx" />
-    <Content Include="gallery.aspx" />
     <Content Include="Register.aspx" />
-    <Content Include="WebForm4.aspx" />
+    <Content Include="signIn.aspx" />
+    <Content Include="about.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connect.cs" />
@@ -99,13 +102,6 @@
     <Compile Include="Homepage.aspx.designer.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="gallery.aspx.cs">
-      <DependentUpon>gallery.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="gallery.aspx.designer.cs">
-      <DependentUpon>gallery.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -121,6 +117,13 @@
       <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="usersData.aspx.cs">
+      <DependentUpon>usersData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usersData.aspx.designer.cs">
+      <DependentUpon>usersData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="userService.cs" />
     <Compile Include="validation.cs" />
     <Compile Include="Watch.cs" />
@@ -131,27 +134,20 @@
     <Compile Include="watchData.aspx.designer.cs">
       <DependentUpon>watchData.aspx</DependentUpon>
     </Compile>
-    <Compile Include="watchInfo.aspx.cs">
-      <DependentUpon>watchInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="watchInfo.aspx.designer.cs">
-      <DependentUpon>watchInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="watchRate.aspx.cs">
-      <DependentUpon>watchRate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="watchRate.aspx.designer.cs">
-      <DependentUpon>watchRate.aspx</DependentUpon>
-    </Compile>
     <Compile Include="watchService.cs" />
-    <Compile Include="WebForm4.aspx.cs">
-      <DependentUpon>WebForm4.aspx</DependentUpon>
+    <Compile Include="signIn.aspx.cs">
+      <DependentUpon>signIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm4.aspx.designer.cs">
-      <DependentUpon>WebForm4.aspx</DependentUpon>
+    <Compile Include="signIn.aspx.designer.cs">
+      <DependentUpon>signIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

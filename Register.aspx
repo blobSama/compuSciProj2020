@@ -10,13 +10,17 @@
 </head>
 <body>
     <div id="header">
-        <a class="bttn1" href="Homepage.aspx">Home Page</a>
-        <a class="bttn1" href="watchRate.aspx">SmartWatch Rate</a>
-        <a class="bttn1" href="watchInfo.aspx">Watch Data</a>
-        <a class="bttn1" href="Register.aspx">Register</a>
-        <a class="bttn1" href="gallery.aspx">Gallery</a>
-        <a class="bttn1" href="enterInfo.aspx">Enter watch</a>
-        <input type="text" id="search" name="search" placeholder="Search..." /><br/>
+        <ul>
+            <li><a class="bttn1" href="Homepage.aspx">Home Page</a></li>
+            <li><a class="bttn1" href="signIn.aspx">Sign In</a></li>
+            <li><a class="bttn1" href="watchData.aspx">Watch Data</a></li>
+            <li><a class="bttn1" href="Register.aspx">Register</a></li>
+            <li><a class="bttn1" href="usersData.aspx">Users Data</a></li>
+            <li><a class="bttn1" href="enterInfo.aspx">Enter watch</a></li>
+            <li><a class="bttn1" href="about.aspx">About Us</a></li>
+            <li style="float:right"><asp:Label ID="hello" CssClass="greet" runat="server" Text=""></asp:Label></li>
+        </ul>
+        <br/>
     </div>
     <br />
     <div id="title">
@@ -28,28 +32,31 @@
             <form id="form1" runat="server">
                 First Name:
                 <em class="redF">*</em><br />
-                <input type="text" class="name" id="fName" name="name" required="required"/><br />
+                <input type="text" class="name" id="fName" name="fName" required="required"/><br />
                 <asp:Label ID="wrngName" runat="server" Text=""></asp:Label>
                 <br /> Last Name:
                 <em class="redF">*</em><br />
-                <input type="text" class="name" id="lName" name="name" required="required"/><br />
+                <input type="text" class="name" id="lName" name="lName" required="required"/><br />
                 <asp:Label ID="wrngFmly" runat="server" Text=""></asp:Label><br /> 
-                Email Adress:<br />
+                Email Adress:<em class="redF">*</em><br />
                 <input type="text" id="mail" name="mail" placeholder="name@gmail.com"/><br />
                 <asp:Label ID="mailWrng" runat="server" Text=""></asp:Label><br /> 
-                Age: <br />
+                Age:<em class="redF">*</em> <br />
                 <input type="number" id="age" name="age"/><br />
                 <asp:Label ID="ageWrng" runat="server" Text=""></asp:Label><br />
                 Password(minimum 8 chars):
                 <em class="redF">*</em><br />
-                <input type="password" id="pass" name="password" pattern=".{8,12}" title="8 to 12 characters" required ="required"/><br />
+                <input type="password" id="pass" name="password" title="8 to 16 characters" required ="required"/><br />
                 <asp:Label ID="passWrng" runat="server" Text=""></asp:Label><br />
                 <asp:Label ID="enterId" runat="server" Text="Id:"></asp:Label><em class="redF">*</em><br />
-                <asp:TextBox ID="Uid" runat="server"></asp:TextBox><br />
+                <asp:TextBox ID="UId" runat="server"></asp:TextBox><br />
                 <asp:Label ID="idWrng" runat="server" Text=""></asp:Label><br />
-                <input type="button" id="check" class="sub1" value="Check form" onclick="checkAll()" />
+                <input type="button" id="check" class="sub1" value="Check form" onclick="checkAll()" onchange="dis()"/>
 				<input type="reset" value="Reset" class="sub1" /><br />
-                <asp:Button ID="submit" CssClass="sub1" runat="server" Text="Submit" disabled="disabled"/>
+                <asp:Label ID="csWrong" runat="server" Text=""></asp:Label>
+                <br />
+                <asp:Label ID="checkWrng" runat="server" Text=""></asp:Label><br />
+                <asp:Button ID="submit" CssClass="sub1" runat="server" Text="Submit" disabled="disabled" OnClick="submit_Click"/>
                 <br />
                 <small>
                     <em class="redF">*</em> indicates a required field
@@ -58,7 +65,7 @@
         </div>
     </div>
     <footer id="foot1">
-        <p>contact us, etc.</p>
+        <p>contact us - ariel.berant@gmail.com</p>
     </footer>
 </body>
 </html>

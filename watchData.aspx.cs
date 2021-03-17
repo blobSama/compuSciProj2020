@@ -12,6 +12,14 @@ namespace compuSciProj2020
         protected void Page_Load(object sender, EventArgs e)
         {
             PopulateGrid();
+            if (Session["curUser"] != null)
+            {
+                hello.Text = "Hello, " + ((User)Session["curUser"]).Firstname;
+            }
+            else
+            {
+                hello.Text = "Hello, Guest";
+            }
         }
 
         public void PopulateGrid()

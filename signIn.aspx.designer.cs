@@ -11,7 +11,7 @@ namespace compuSciProj2020
 {
 
 
-    public partial class enterInfo
+    public partial class WebForm5
     {
 
         /// <summary>
@@ -33,48 +33,57 @@ namespace compuSciProj2020
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// watchPic control.
+        /// idLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox watchPic;
+        protected global::System.Web.UI.WebControls.Label idLbl;
 
         /// <summary>
-        /// linkWrng control.
+        /// idTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label linkWrng;
+        protected global::System.Web.UI.WebControls.TextBox idTxt;
 
         /// <summary>
-        /// enqWrng control.
+        /// passLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label enqWrng;
+        protected global::System.Web.UI.WebControls.Label passLbl;
 
         /// <summary>
-        /// submitWrng control.
+        /// passTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label submitWrng;
+        protected global::System.Web.UI.WebControls.TextBox passTxt;
 
         /// <summary>
-        /// submit control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
+        protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
+        /// problemShow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label problemShow;
     }
 }

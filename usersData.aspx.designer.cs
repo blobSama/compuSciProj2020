@@ -11,8 +11,17 @@ namespace compuSciProj2020
 {
 
 
-    public partial class WebForm4
+    public partial class usersData
     {
+
+        /// <summary>
+        /// hello control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label hello;
 
         /// <summary>
         /// form1 control.
@@ -24,12 +33,12 @@ namespace compuSciProj2020
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Calendar1 control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
