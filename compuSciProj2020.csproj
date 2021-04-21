@@ -74,7 +74,6 @@
     <Content Include="Images\3.jpg" />
     <Content Include="Images\4.jpg" />
     <Content Include="projScript.js" />
-    <Content Include="registration.aspx" />
     <Content Include="styleSheet.css" />
     <Content Include="usersData.aspx" />
     <Content Include="watchData.aspx" />
@@ -108,13 +107,6 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="registration.aspx.cs">
-      <DependentUpon>registration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="registration.aspx.designer.cs">
-      <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="usersData.aspx.cs">

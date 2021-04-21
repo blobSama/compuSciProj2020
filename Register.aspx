@@ -32,24 +32,24 @@
             <form id="form1" runat="server">
                 First Name:
                 <em class="redF">*</em><br />
-                <input type="text" class="name" id="fName" name="fName" required="required"/><br />
+                <input type="text" class="in" id="fName" name="fName" required="required"/><br />
                 <asp:Label ID="wrngName" runat="server" Text=""></asp:Label>
                 <br /> Last Name:
                 <em class="redF">*</em><br />
-                <input type="text" class="name" id="lName" name="lName" required="required"/><br />
+                <input type="text" class="in" id="lName" name="lName" required="required"/><br />
                 <asp:Label ID="wrngFmly" runat="server" Text=""></asp:Label><br /> 
-                Email Adress:<em class="redF">*</em><br />
-                <input type="text" id="mail" name="mail" placeholder="name@gmail.com"/><br />
+                Email Address:<em class="redF">*</em><br />
+                <input type="text" class="in" id="mail" name="mail" placeholder="name@gmail.com"/><br />
                 <asp:Label ID="mailWrng" runat="server" Text=""></asp:Label><br /> 
                 Age:<em class="redF">*</em> <br />
-                <input type="number" id="age" name="age"/><br />
+                <input type="number" class="in" id="age" name="age"/><br />
                 <asp:Label ID="ageWrng" runat="server" Text=""></asp:Label><br />
                 Password(minimum 8 chars):
                 <em class="redF">*</em><br />
-                <input type="password" id="pass" name="password" title="8 to 16 characters" required ="required"/><br />
+                <input type="password" class="in" id="pass" name="password" title="8 to 16 characters" required ="required"/><br />
                 <asp:Label ID="passWrng" runat="server" Text=""></asp:Label><br />
                 <asp:Label ID="enterId" runat="server" Text="Id:"></asp:Label><em class="redF">*</em><br />
-                <asp:TextBox ID="UId" runat="server"></asp:TextBox><br />
+                <asp:TextBox ID="UId" CssClass="in" runat="server"></asp:TextBox><br />
                 <asp:Label ID="idWrng" runat="server" Text=""></asp:Label><br />
                 <input type="button" id="check" class="sub1" value="Check form" onclick="checkAll()" onchange="dis()"/>
 				<input type="reset" value="Reset" class="sub1" /><br />

@@ -33,9 +33,9 @@
                 <div>
                     <h1>Sign In</h1><br />
                     <asp:Label ID="idLbl" runat="server" Text="Enter Id:"></asp:Label><br />
-                    <asp:TextBox ID="idTxt" runat="server"></asp:TextBox><br /><br />
+                    <asp:TextBox ID="idTxt" CssClass="in" runat="server"></asp:TextBox><br /><br />
                     <asp:Label ID="passLbl" runat="server" Text="Enter Password:"></asp:Label><br />
-                    <asp:TextBox ID="passTxt" TextMode="Password" runat="server"></asp:TextBox><br /><br />
+                    <asp:TextBox ID="passTxt" CssClass="in" TextMode="Password" runat="server"></asp:TextBox><br /><br />
                     <asp:Button ID="Button1" CssClass="sub1" runat="server" Text="Sign In" OnClick="Button1_Click" /><br />
                     <asp:Label ID="problemShow" runat="server" Text=""></asp:Label>
                 </div>

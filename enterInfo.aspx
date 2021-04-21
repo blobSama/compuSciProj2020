@@ -46,7 +46,7 @@
 				<input type="radio" id="yes" name="accntExst" onchange="accntCheck()" required ="required" />
 				<label for="yes">Yes</label><br />
 				<label for="accntExst" class="lbl1" id="noAccnt">Please choose one.</label><br /><br />
-				<label for="mail">Email Adress</label><br />
+				<label for="mail">Email Address</label><br />
 				<input class="in" type="text" id="mail" name="mail" placeholder="name@gmail.com" onchange="ValidateEmail()"/><br />
 				<label for="mail" class="lbl1" id="mailWrng"></label><br /><br />
 				<label for="phone">Mobile Number</label><br />
