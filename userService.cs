@@ -22,7 +22,7 @@ namespace compuSciProj2020
             try
             {
                 myConnection.Open();
-                string sSql = "INSERT INTO [Users](ID, firstName, [lastName], [mailAdrs], [age], [password]) VALUES('" + u.ID + "', '" + u.Firstname + "', '"+u.Lastname+"', '"+u.Addrs+"', "+u.Age+", '"+u.pssWrd+"')";
+                string sSql = "INSERT INTO [Users](ID, firstName, [lastName], [mailAdrs], [age], [password], isActive) VALUES('" + u.ID + "', '" + u.Firstname + "', '" + u.Lastname + "', '" + u.Addrs + "', " + u.Age + ", '" + u.pssWrd + "', True)";
                 OleDbCommand myCmd = new OleDbCommand(sSql, myConnection);
                 myCmd.ExecuteNonQuery();
             }
@@ -66,7 +66,7 @@ namespace compuSciProj2020
             try
             {
                 myConnection.Open();
-                string sSql = "select * from Users where ID='"+id+"'";
+                string sSql = "select * from Users where ID='" + id + "'";
                 OleDbCommand myCmd = new OleDbCommand(sSql, myConnection);
                 OleDbDataAdapter adapter = new OleDbDataAdapter();
                 adapter.SelectCommand = myCmd;
@@ -104,6 +104,44 @@ namespace compuSciProj2020
                 myConnection.Close();
             }
             return dataset;
+        }
+
+        public void LogicalDelete(string ID)
+        {
+            try
+            {
+                myConnection.Open();
+                string sSql = "UPDATE Users SET isActive = False WHERE ID = '" + ID + "'";
+                OleDbCommand myCmd = new OleDbCommand(sSql, myConnection);
+                myCmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                myConnection.Close();
+            }
+        }
+
+        public void UpdateUser(User u)
+        {
+            try
+            {
+                myConnection.Open();
+                string sSql = "UPDATE Users SET firstName = '" + u.Firstname + "', [lastName] = '" + u.Lastname + "', [mailAdrs] = '" + u.Addrs + "', [age] = " + u.Age + ", [password] = '" + u.pssWrd + "' WHERE ID = '" + u.ID + "'";
+                OleDbCommand myCmd = new OleDbCommand(sSql, myConnection);
+                myCmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                myConnection.Close();
+            }
         }
     }
 }

@@ -1,9 +1,8 @@
 table {
     grid-area: grid;
-    border: 2px solid rgba(0, 0, 0, 0.582);
+    border: none;
     /*align-items: left;*/
     margin: 20px auto;
-    border-width: 2px;
     grid-column-start: 1;
     grid-column-end: 4;
 }
@@ -102,7 +101,7 @@ img {
 }
 
 #uploadOut {
-    background-color: white;
+    background-color: beige;
     padding: 5px;
     border: 2px solid black;
     border-radius: 25px;
@@ -172,6 +171,14 @@ img {
     border-bottom: 1px solid red;
     background-color: aquamarine;
     outline:none;
+}
+
+.in2 {
+    width: 75%;
+    height: 50px;
+    border:none;
+    background-color: aquamarine;
+    outline: none;
 }
 
 #ftrs {
@@ -259,4 +266,30 @@ li {
     grid-column-end: 3;
     width: 450px;
     height:350px;
+}
+
+#infUpdtOut {
+    background-color: beige;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 25px;
+    grid-area: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-bottom: 50px;
+}
+
+#infUpdtIn {
+    border: 2px solid black;
+    border-radius: 25px;
+    grid-area: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+#showPass {
+    background-color: aquamarine;
+    border: none;
 }

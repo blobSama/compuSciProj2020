@@ -11,7 +11,7 @@ namespace compuSciProj2020
 {
 
 
-    public partial class WebForm3
+    public partial class updateInfo
     {
 
         /// <summary>
@@ -42,111 +42,138 @@ namespace compuSciProj2020
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// wrngName control.
+        /// firstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label wrngName;
+        protected global::System.Web.UI.WebControls.Label firstName;
 
         /// <summary>
-        /// wrngFmly control.
+        /// fNameChange control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label wrngFmly;
+        protected global::System.Web.UI.WebControls.TextBox fNameChange;
 
         /// <summary>
-        /// mailWrng control.
+        /// lastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label mailWrng;
+        protected global::System.Web.UI.WebControls.Label lastName;
 
         /// <summary>
-        /// ageWrng control.
+        /// lNameChange control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ageWrng;
+        protected global::System.Web.UI.WebControls.TextBox lNameChange;
 
         /// <summary>
-        /// passWrng control.
+        /// mail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label passWrng;
+        protected global::System.Web.UI.WebControls.Label mail;
 
         /// <summary>
-        /// passConfWrng control.
+        /// mailChange control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label passConfWrng;
+        protected global::System.Web.UI.WebControls.TextBox mailChange;
 
         /// <summary>
-        /// enterId control.
+        /// showPass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label enterId;
+        protected global::System.Web.UI.WebControls.Button showPass;
 
         /// <summary>
-        /// UId control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UId;
+        protected global::System.Web.UI.WebControls.Label password;
 
         /// <summary>
-        /// idWrng control.
+        /// passwordChnge control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label idWrng;
+        protected global::System.Web.UI.WebControls.TextBox passwordChnge;
 
         /// <summary>
-        /// csWrong control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label csWrong;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// checkWrng control.
+        /// passwordVrfy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label checkWrng;
+        protected global::System.Web.UI.WebControls.TextBox passwordVrfy;
 
         /// <summary>
-        /// submit control.
+        /// ageShow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
+        protected global::System.Web.UI.WebControls.Label ageShow;
+
+        /// <summary>
+        /// ageChange control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ageChange;
+
+        /// <summary>
+        /// Submit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Submit;
+
+        /// <summary>
+        /// csWrng control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label csWrng;
     }
 }

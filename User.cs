@@ -13,6 +13,8 @@ namespace compuSciProj2020
         private string passWord;
         private string addrs;
         private int age;
+        private bool isManager;
+        private string pssWrdVrfy;
 
         public User()
         {
@@ -90,5 +92,30 @@ namespace compuSciProj2020
                 this.age = value;
             }
         }
+
+        public bool Manager
+        {
+            get
+            {
+                return this.isManager;
+            }
+            set
+            {
+                this.isManager = value;
+            }
+        }
+
+        public string passwordVerify
+        {
+            get
+            {
+                return this.pssWrdVrfy;
+            }
+            set
+            {
+                this.pssWrdVrfy = value;
+            }
+        }
     }
+
 }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
+using System.Data.OleDb;
 
 namespace compuSciProj2020
 {
@@ -140,9 +142,13 @@ namespace compuSciProj2020
             }
         }
 
-        public static bool CheckPass(string pass)//checks if password is between 8 to 16 characters
+        public static bool CheckPass(string pass, string verify)//checks if password is between 8 to 16 characters
         {
-            if (pass.Length >= 8 && pass.Length <= 16)
+            if(verify == null || pass == null)
+            {
+                return false;
+            }
+            if (verify.Equals(pass) && (pass.Length >= 8 && pass.Length <= 16))
             {
                 return true;
             }
@@ -194,13 +200,25 @@ namespace compuSciProj2020
             {
                 ok = false;
             }
-            if (!CheckPass(u.pssWrd))
+            if (!CheckPass(u.pssWrd, u.passwordVerify))
             {
                 ok = false;
             }
             if (!CheckId(u.ID))
             {
                 ok = false;
+            }
+            return ok;
+        }
+
+        public static bool idExists(string id)
+        {
+            bool ok = false;
+            userService us = new userService();
+            DataSet ds = us.GetUser(id);
+            if (ds.Tables[0].Rows.Count != 0)
+            {
+                ok = true;
             }
             return ok;
         }

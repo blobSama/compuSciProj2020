@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="styleSheet.css"/>
     <script src="projScript.js"></script>
 
-</head>
+</head> 
 <body>
     <div id="header">
         <ul>
@@ -19,6 +19,7 @@
             <li><a class="bttn1" href="usersData.aspx">Users Data</a></li>
             <li><a class="bttn1" href="enterInfo.aspx">Enter watch</a></li>
             <li><a class="bttn1" href="about.aspx">About Us</a></li>
+            <li><asp:HyperLink CssClass="bttn1" ID="infoUpdate" href="updateInfo.aspx" runat="server">Update User Info</asp:HyperLink></li>
             <li style="float:right"><asp:Label ID="hello" CssClass="greet" runat="server" Text=""></asp:Label></li>
         </ul>
         <br/>
@@ -33,7 +34,7 @@
                 <div>
                     <h1>Sign In</h1><br />
                     <asp:Label ID="idLbl" runat="server" Text="Enter Id:"></asp:Label><br />
-                    <asp:TextBox ID="idTxt" CssClass="in" runat="server"></asp:TextBox><br /><br />
+                    <asp:TextBox ID="idTxt" CssClass="in" runat="server" autofocus="autofocus"></asp:TextBox><br /><br />
                     <asp:Label ID="passLbl" runat="server" Text="Enter Password:"></asp:Label><br />
                     <asp:TextBox ID="passTxt" CssClass="in" TextMode="Password" runat="server"></asp:TextBox><br /><br />
                     <asp:Button ID="Button1" CssClass="sub1" runat="server" Text="Sign In" OnClick="Button1_Click" /><br />

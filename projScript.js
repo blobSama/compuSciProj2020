@@ -192,14 +192,23 @@ function checkAge() {
 
 function checkPass() {
     var pass = document.getElementById("pass").value;
+    var passConf = document.getElementById("passConf").value;
     if (!(pass.length >= 8 && pass.length <= 16)) {
         document.getElementById("passWrng").innerText = "Please enter valid password(between 8 to 16 chars).";
         document.getElementById("pass").value = "";
         return false;
     }
     else {
-        document.getElementById("passWrng").innerText = "";
-        return true;
+        if (passConf == "" || passConf.localeCompare(pass) != 0) {
+            document.getElementById("passConfWrng").innerText = "Password and password confirmation must be same.";
+            document.getElementById("passConf").value = "";
+            return false;
+        }
+        else {
+            document.getElementById("passWrng").innerText = "";
+            document.getElementById("passConfWrng").innerText = "";
+            return true;
+        }
     }
 }
 

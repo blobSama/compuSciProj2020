@@ -18,8 +18,10 @@
             <li><a class="bttn1" href="usersData.aspx">Users Data</a></li>
             <li><a class="bttn1" href="enterInfo.aspx">Enter watch</a></li>
             <li><a class="bttn1" href="about.aspx">About Us</a></li>
+            <li><asp:HyperLink CssClass="bttn1" ID="infoUpdate" href="updateInfo.aspx" runat="server">Update User Info</asp:HyperLink></li>
             <li style="float:right"><asp:Label ID="hello" CssClass="greet" runat="server" Text=""></asp:Label></li>
         </ul>
+        
         <br/>
     </div>
     <br />
@@ -32,7 +34,7 @@
             <form id="form1" runat="server">
                 First Name:
                 <em class="redF">*</em><br />
-                <input type="text" class="in" id="fName" name="fName" required="required"/><br />
+                <input type="text" class="in" id="fName" name="fName" required="required" autofocus="autofocus"/><br />
                 <asp:Label ID="wrngName" runat="server" Text=""></asp:Label>
                 <br /> Last Name:
                 <em class="redF">*</em><br />
@@ -48,6 +50,10 @@
                 <em class="redF">*</em><br />
                 <input type="password" class="in" id="pass" name="password" title="8 to 16 characters" required ="required"/><br />
                 <asp:Label ID="passWrng" runat="server" Text=""></asp:Label><br />
+                Confirm Password:
+                <em class="redF">*</em><br />
+                <input type="password" class="in" id="passConf" name="passwordConfirm" title="8 to 16 characters" required ="required"/><br />
+                <asp:Label ID="passConfWrng" runat="server" Text=""></asp:Label><br />
                 <asp:Label ID="enterId" runat="server" Text="Id:"></asp:Label><em class="redF">*</em><br />
                 <asp:TextBox ID="UId" CssClass="in" runat="server"></asp:TextBox><br />
                 <asp:Label ID="idWrng" runat="server" Text=""></asp:Label><br />

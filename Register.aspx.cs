@@ -20,6 +20,7 @@ namespace compuSciProj2020
             else
             {
                 hello.Text = "Hello, Guest";
+                
             }
         }
 
@@ -30,6 +31,7 @@ namespace compuSciProj2020
             string mail = Request.Form["mail"];
             int age = int.Parse(Request.Form["age"]);
             string pass = Request.Form["password"];
+            string passVrfy = Request.Form["passwordConf"];
             string id = UId.Text;
 
             User u1 = new User();
@@ -38,13 +40,14 @@ namespace compuSciProj2020
             u1.Firstname = firstN;
             u1.Lastname = lastN;
             u1.pssWrd = pass;
+            u1.passwordVerify = passVrfy;
             u1.ID = id;
 
             if (validation.CheckUser(u1))
             {
                 userService us = new userService();
                 DataSet ds = us.GetUser(u1.ID);
-                if (ds.Tables[0].Rows.Count== 0)
+                if (ds.Tables[0].Rows.Count == 0)
                 {
                     us.InsertUser(u1);
                     Session["curUser"] = u1;
