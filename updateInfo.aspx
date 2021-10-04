@@ -32,6 +32,8 @@
         <div id="infUpdtOut">
             <div id="infUpdtIn">
                 <h1>Update Info</h1>
+                <asp:Label ID="info" runat="server" Text="Please make sure your email format is xxx@xxx.xx, your first and last names do not includes numbers, your passwords match and are between 8 to 16 characters and that your age is a number"></asp:Label>
+                <br />
                 <table>
                     <tr>
                         <td>First Name: </td>
@@ -51,14 +53,12 @@
                     <tr>
                         <td><asp:Button ID="showPass" runat="server" Text="Show Password" OnClick="showPass_Click"/></td>
                         <td><asp:Label ID="password" runat="server" Text=""></asp:Label></td>
-                        <td>
-                            <asp:TextBox CssClass="in" ID="passwordChnge" runat="server" TextMode="Password" ></asp:TextBox></td>
+                        <td><asp:TextBox CssClass="in" ID="passwordChnge" runat="server"></asp:TextBox></td>
                     </tr>
                     <tr>
                         <td>Confirm Password: </td>
                         <td><asp:Label ID="Label1" runat="server" Text=""></asp:Label></td>
-                        <td>
-                            <asp:TextBox CssClass="in" ID="passwordVrfy" runat="server" TextMode="Password" CausesValidation="False"></asp:TextBox></td>
+                        <td><asp:TextBox CssClass="in" ID="passwordVrfy" runat="server"></asp:TextBox></td>
                     </tr>
                     <tr>
                         <td>Age:</td>
@@ -66,7 +66,7 @@
                         <td><asp:TextBox CssClass="in" ID="ageChange" runat="server"></asp:TextBox></td>      
                     </tr>
                 </table>
-                <asp:Button CssClass="sub1" ID="Submit" runat="server" Text="Submit Changes" OnClick="Submit_Click" CausesValidation="False"/><br />
+                <asp:Button CssClass="sub1" ID="Submit" runat="server" Text="Submit Changes" OnClick="Submit_Click"/><br />
                 <asp:Label ID="csWrng" runat="server" Text=""></asp:Label>
             </div>
         </div>

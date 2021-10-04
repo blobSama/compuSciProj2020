@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.OleDb;
+using System.Windows.Input;
 
 namespace compuSciProj2020
 {
@@ -17,6 +18,8 @@ namespace compuSciProj2020
             {
                 hello.Text = "Hello, " + ((User)Session["curUser"]).Firstname;
                 PopulateLabels();
+                passwordChnge.Attributes["type"] = "password";
+                passwordVrfy.Attributes["type"] = "password";
             }
             else
             {
@@ -29,8 +32,6 @@ namespace compuSciProj2020
             firstName.Text = ((User)Session["curUser"]).Firstname;
             lastName.Text = ((User)Session["curUser"]).Lastname;
             mail.Text = ((User)Session["curUser"]).Addrs;
-            passwordChnge.Text = "";
-            passwordVrfy.Text = "";
             ageShow.Text = ((User)Session["curUser"]).Age.ToString();
         }
 
@@ -98,7 +99,7 @@ namespace compuSciProj2020
             else
             {
                 Submit.CssClass = "sub1";
-                csWrng.Text = "Something went wrong. Please check your input and try again.";
+                csWrng.Text = "Something went wrong. Please check your input fits the description and try again..";
             }
         }
     }
